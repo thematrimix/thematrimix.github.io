@@ -1,0 +1,12 @@
+# Site settings
+title: Crayon Eating Monsters
+email: thematrimix@yahoo.com
+description: > # this means to ignore newlines until "baseurl:"
+  A site dedicated to the mosters who eat crayon. Some are ugly and some are not, but they all eat crayons.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://giant-snail.mooo.com" # the base hostname & protocol for your site
+twitter_username: thematrimix
+github_username:  thematrimix
+
+# Build settings
+markdown: kramdown

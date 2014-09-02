@@ -1,7 +1,7 @@
 ---
-published: false
+published: true
 layout: post
-categories: jekyll update
+categories: Initial
 ---
 
 ## A New Post

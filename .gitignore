@@ -2,5 +2,5 @@
 .vagrant/
 
 # Jekyll
-.sass-cache
-_site
+.sass-cache/
+_site/

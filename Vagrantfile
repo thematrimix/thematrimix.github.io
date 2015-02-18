@@ -16,6 +16,5 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 	config.vm.provision :shell, :path => "provision/05_pre-install-nvm.sh"
 	config.vm.provision :shell, :path => "provision/06_user-install-nvm.sh", :args => "v0.23.3", :privileged => false
 	config.vm.provision :shell, :path => "provision/07_user-install-node.sh", :args => "stable", :privileged => false
-	config.vm.provision :shell, :path => "provision/08_user_create_jekyll_site.sh", :args => "[[site_name]]", :privileged => false
 	config.vm.provision :shell, :path => "provision/99_cleanup.sh"
 end

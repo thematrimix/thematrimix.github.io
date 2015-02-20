@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-dpkg -l nodejs > /dev/null 2>&1
+dpkg -l nodejs >/dev/null 2>&1
 
 if [ $? -eq 0 ]; then
 	echo ">>>>>REMOVING NodeJS<<<<<"
@@ -10,7 +10,7 @@ else
 	echo ">>>>>NodeJS is not installed<<<<<"
 fi
 
-dpkg -l npm > /dev/null 2>&1
+dpkg -l npm >/dev/null 2>&1
 
 if [ $? -eq 0 ]; then
 	echo ">>>>>REMOVING npm<<<<<"

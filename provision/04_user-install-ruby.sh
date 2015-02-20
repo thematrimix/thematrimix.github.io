@@ -3,17 +3,21 @@
 if [ -s ~/.rvm/scripts/rvm ]; then
 	source ~/.rvm/scripts/rvm
 
-	echo ">>>>>Installing ruby version $1<<<<<"
-	rvm install $1
+	rubyCurrent=`rvm current`
 
-	#For now just use the last installed
-	rvm use --default $1
+	if [ -z "$rubyCurrent" ] || [[ "ruby-$1" != $rubyCurrent && "ruby-$1" > $rubyCurrent ]]; then
+		echo ">>>>>Installing ruby version $1<<<<<"
+		rvm install $1
 
-	shift
+		#For now just use the last installed
+		rvm use --default $1
 
-	if (( $# )); then
-		echo ">>>>>Installing gems $@<<<<<"
-		gem install $@
+		shift
+
+		if (( $# )); then
+			echo ">>>>>Installing gems $@<<<<<"
+			gem install $@
+		fi
 	fi
 
 	echo ">>>>>ruby version is: $(ruby -v)<<<<<"

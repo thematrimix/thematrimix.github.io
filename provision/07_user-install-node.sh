@@ -3,21 +3,31 @@
 if [ -s ~/.nvm/nvm.sh ]; then
 	source ~/.nvm/nvm.sh
 
-	echo ">>>>>Installing NodeJS version $1<<<<<"
-	nvm install $1
+	nodeCurrent=`nvm current`
 
-	#For now just use the last installed
-	nvm alias default $1
-	nvm use $1
+	if [[ -z "$nodeCurrent" || "$nodeCurrent" == "none" ]]; then
+		echo ">>>>>Installing NodeJS version $1<<<<<"
+		nvm install $1
 
-	shift
+		#For now just use the last installed
+		nvm alias default $1
+		nvm use $1
 
-	if (( $# )); then
-		echo ">>>>>Installing global node packages $@<<<<<"
-		npm install -g $@
+		shift
 	fi
 
 	echo ">>>>>nodejs version is: $(nvm current)<<<<<"
 else
-	echo ">>>>>nvm does not appear to be installed<<<<<"
+	echo ">>>>>Can't install node with out nvm<<<<<"
+fi
+
+type npm >/dev/null 2>&1
+
+if [ $? -ne 0 ] && (( $# )); then
+	echo ">>>>>Installing global node packages $@<<<<<"
+	npm install -g $@
+elif (( $# )); then
+	echo ">>>>>no packages to install<<<<<"
+else
+	echo ">>>>>npm is not installed<<<<<"
 fi

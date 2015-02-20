@@ -9,8 +9,6 @@ if [ $? -ne 0 ]; then
 	#need to add the source for this session
 	source ~/.rvm/scripts/rvm
 else
-	echo ">>>>>Updating rvm<<<<<"
-	rvm get $1
+	echo ">>>>>rvm version is: $(rvm --version)<<<<<"
 fi
 
-echo ">>>>>rvm version is: $(rvm --version)<<<<<"

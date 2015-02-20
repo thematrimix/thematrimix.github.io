@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 
-type nvm >/dev/null 2>&1
-
-if [ $? -ne 0 ]; then
+if [ ! -s ~/.nvm/nvm.sh ]; then
 	echo ">>>>>Installing nvm<<<<<"
 	\curl https://raw.githubusercontent.com/creationix/nvm/$1/install.sh | bash
 else
+	source ~/.nvm/nvm.sh
 	echo ">>>>>nvm version is: $(nvm --version)<<<<<"
 fi

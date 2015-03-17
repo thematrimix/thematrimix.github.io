@@ -1,0 +1,275 @@
+.site-header {
+  @include size(100% 50%);
+}
+@include media($medium-screen-up) {
+  .site-header {
+    @include size(100% 75%);
+  }
+}
+
+.site-header-hamburger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: $site-theme-color-main;
+  height: $header-size;
+  width: 100%;
+  z-index: $header-zindex;
+  box-shadow: 0 rem(1) rem(2) rgba(0, 0, 0, 0.3);
+}
+@include media($medium-screen-up) {
+  .site-header-hamburger {
+    background: transparent;
+    box-shadow: none;
+  }
+}
+@include media($large-screen-up) {
+  .site-header-hamburger {
+    transition: background-color 0.3s;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    height: $header-size-large;
+
+    &.is-fixed {
+      /* when the user scrolls down, we hide the header right above the viewport */
+      position: fixed;
+      top: $header-size-large * -1;
+      background-color: rgba(2, 23, 37, 0.96);
+      transition: transform 0.3s;
+    }
+    &.is-visible {
+      /* if the user changes the scrolling direction, we show the header */
+      transform: translate3d(0, 100%, 0);
+    }
+  }
+}
+
+.hamburger-trigger {
+  position: relative;
+  cursor: pointer;
+  float: right;
+  height: $hamburger-size * 9;
+  color: $hamburger-color;
+  padding-right: $hamburger-size * 10;
+  margin-top: $hamburger-size * 3;
+  margin-right: $hamburger-size * 5;
+  margin-bottom: $hamburger-size * 3;
+  margin-left: $hamburger-size * 3;
+
+  &:hover {
+    background: $site-theme-color-highlight;
+    border-radius: rem(5);
+  }
+
+  .hamburger-text {
+    position: inherit;
+    text-transform: uppercase;
+    font-size: $hamburger-size * 6;
+    color: $hamburger-color;
+    display: none;
+    transition: all 0.4s ease-in-out;
+    margin-left: $hamburger-size * 2;
+  }
+
+  .hamburger-icon {
+    top: $hamburger-size * 3.7;
+    margin-right: $hamburger-size * 2;
+  }
+
+  .hamburger-icon,
+  .hamburger-icon:before,
+  .hamburger-icon:after {
+    border-radius: rem(1);
+    height: $hamburger-size;
+    width: $hamburger-size * 6;
+    background: $hamburger-color;
+    position: absolute;
+    display: block;
+    content: '';
+    right: 0;
+    transition: all 0.4s ease-in-out;
+  }
+  .hamburger-icon:before {
+    top: $hamburger-size * -2;
+  }
+  .hamburger-icon:after {
+    bottom: $hamburger-size * -2;
+  }
+
+  &.active .hamburger-icon {
+    background-color: transparent;
+  }
+  &.active .hamburger-icon:before,
+  &.active .hamburger-icon:after {
+    top: 0;
+  }
+  &.active .hamburger-icon:before {
+    transform: rotate(45deg);
+  }
+  &.active .hamburger-icon:after {
+    transform: translateY($hamburger-size * -2) rotate(-45deg);
+    top: $hamburger-size * 2;
+  }
+}
+@include media($medium-screen-up) {
+  .hamburger-trigger {
+    .hamburger-text {
+      display: inline-block;
+    }
+  }
+}
+@include media($large-screen-up) {
+  .hamburger-trigger {
+    height: $hamburger-size-large * 9;
+    padding-right: $hamburger-size-large * 10;
+    margin-top: $hamburger-size-large * 3;
+    margin-right: $hamburger-size-large * 5;
+    margin-bottom: $hamburger-size-large * 3;
+    margin-left: $hamburger-size-large * 3;
+
+    .hamburger-text {
+      font-size: $hamburger-size-large * 6;
+    }
+
+    .hamburger-icon {
+      top: $hamburger-size-large * 3.7;
+      margin-right: $hamburger-size-large * 2;
+    }
+
+    .hamburger-icon,
+    .hamburger-icon:before,
+    .hamburger-icon:after {
+      height: $hamburger-size-large;
+      width: $hamburger-size-large * 6;
+    }
+    .hamburger-icon:before {
+      top: $hamburger-size-large * -2;
+    }
+    .hamburger-icon:after {
+      bottom: $hamburger-size-large * -2;
+    }
+
+    &.active .hamburger-icon:after {
+      transform: translateY($hamburger-size-large * -2) rotate(-45deg);
+      top: $hamburger-size-large * 2;
+    }
+  }
+}
+
+.header-main-nav-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(2, 23, 37, 0.96);
+  z-index: $nav-zindex;
+  text-align: center;
+  padding: $header-size 0;
+  backface-visibility: hidden;
+  overflow: auto;
+  transform: translateY(-100%);
+  transition-property: transform;
+  transition-duration: 0.4s;
+
+  li {
+    font-size: rem(20);
+    margin: rem(10) 0;
+    text-transform: capitalize;
+  }
+
+  a {
+    cursor: pointer;
+    color: white;
+    padding: .4em 1em;
+    border-radius: 0.25em;
+    transition: background 0.2s;
+  }
+
+  .header-main-nav {
+    a {
+      cursor: pointer;
+      color: white;
+      @include border-top-radius(rem(3));
+      @include border-bottom-radius(rem(3));
+      @include padding(rem(8));
+      @include background(transparent);
+
+      &:hover {
+        @include background($site-theme-color-highlight);
+      }
+    }
+  }
+
+  .section-header {
+    color: #b4c6d3;
+    text-transform: capitalize;
+    font-size: rem(14);
+    padding-top: rem(15);
+    margin: 0;
+  }
+
+  .header-social-nav {
+    li {
+      display: inline-block;
+      @include padding(null rem(5) null rem(5));
+    }
+
+    .icon {
+      cursor: pointer;
+      display: inline-block;
+      @include padding(0);
+      @include size(rem(44) rem(44));
+      @include hide-text;
+    }
+
+    a {
+      &.github {
+        @include background(url("../images/github.svg") no-repeat);
+      }
+
+      &.twitter {
+        @include background(url("../images/twitter.svg") no-repeat);
+      }
+
+      &.linkedin {
+        @include background(url("../images/linkedin.svg") no-repeat);
+      }
+
+      &.facebook {
+        @include background(url("../images/facebook-square.svg") no-repeat);
+      }
+
+      &.googleplus {
+        @include background(url("../images/googleplus-square.svg") no-repeat);
+      }
+
+      &.rss-feed {
+        @include background(url("../images/rss-feed.svg") no-repeat);
+      }
+    }
+  }
+}
+@include media($large-screen-up) {
+  .header-main-nav-container {
+    padding: $header-size-large 0;
+  }
+}
+
+.is-visible {
+  transform: translateY(0);
+}
+
+.header-main-image {
+  position: relative;
+  height: 100%;
+  background: url("http://placeskull.com/160/45/fc9426") center center no-repeat;
+  background-size: cover;
+  z-index: $content-zindex;
+  margin-top: $header-size;
+}
+@include media($medium-screen-up) {
+  .header-main-image {
+    margin-top: 0;
+  }
+}

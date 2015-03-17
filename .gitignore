@@ -1,6 +1,4 @@
-# Vagrant
-.vagrant/
-
-# Jekyll
-.sass-cache/
-_site/
+_site
+.sass-cache
+.idea
+.vagrant

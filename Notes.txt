@@ -1,0 +1,44 @@
+Site layout
+
+Landing Page
+* big image across whole top of little monsters sneaking around to get the crayons
+* just below the big image will be a segway in a split big buttons (blog | storyboard)
+* overall background will be paper textured with scribbles and crayons scatter around
+* note sure how I wanna do navigation from this page. I am thinking maybe a style sliding/drawer menu with a hamburger style icon or maybe a whole page menu (http://tympanus.net/Development/FullscreenOverlayStyles/) or disapearing top scroll menu or full screen popout nav (http://codyhouse.co/demo/full-screen-pop-out-navigation/index.html)
+
+hard to see but here is best I can do in plain test
+
+--------------------------------------------------------------------------------
+|                         Crayon Eating Monsters                               |
+|                                                                              |
+|                              Cool image                                      |
+|                                                                              |
+|                                                                              |
+|                                                                              |
+--------------------------------------------------------------------------------
+                        \            |             /
+                         \    Blog   | Storyboard /
+                          \          |           /
+                           ----------------------
+                           | Latest  | Latest   |
+                           | Blog    | Monster  |
+                           | Entry   | Story    |
+                           |         | Entry    |
+                           |         |          |
+                           |         |          |
+
+--------------------------------------------------------------------------------
+|                         Footer area stuff                                    |
+--------------------------------------------------------------------------------
+
+Thoughtbot projects: Neat as a grid system, Bitters as a baseline (typography, variables, themes), and why not even Refills which is basically a competitive alternative to Bootstrap providing a lot of components, ready to be used in your project.
+
+
+http://zurb.com/article/266/super-awesome-buttons-with-css3-and-rgba
+
+
+
+
+Microdata (very good to learn)
+http://schema.org/docs/gs.html
+https://support.google.com/webmasters/answer/176035?hl=en

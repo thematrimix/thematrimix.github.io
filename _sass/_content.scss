@@ -1,0 +1,94 @@
+main {
+  @include outer-container;
+  z-index: $content-zindex;
+}
+
+.row {
+  margin-top: rem(5);
+  margin-bottom: rem(5);
+}
+
+.post-header {
+  margin-top: rem(5);
+  margin-bottom: rem(5);
+
+  .post-title {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .post-meta {
+    font-size: .8em;
+    font-weight: bold;
+    color: $site-theme-color-highlight;
+
+    &:hover {
+      color: $site-theme-color-main;
+    }
+  }
+}
+
+.post-content {
+}
+
+#wrapper-landing {
+  @include fill-parent();
+
+  div.row:not(:first-child) {
+    display: none;
+  }
+  @include media($medium-screen-up) {
+    div.row:not(:first-child) {
+      @include row();
+    }
+  }
+
+  div.row:first-child .column-landing {
+    text-align: center;
+  }
+
+  .column-landing {
+  }
+  @include media($medium-screen-up) {
+    .column-landing {
+      @include span-columns(2);
+    }
+  }
+  @include media($large-screen-up) {
+    .column-landing {
+      @include span-columns(4);
+    }
+  }
+
+  .link-landing-action {
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.5em;
+    color: $site-theme-color-main;
+    border-top: 3px solid $site-theme-color-main;
+    border-bottom: 3px solid $site-theme-color-main;
+    border-radius: 1px;
+    width: 60%;
+    transition: all 0.4s ease-in-out;
+    margin-top: rem(5);
+    margin-bottom: rem(5);
+
+    &:hover {
+      @include background($site-theme-color-highlight);
+      color: white;
+      transition: all 0.4s ease-in-out;
+    }
+  }
+  @include media($medium-screen-up) {
+    .link-landing-action {
+      font-size: 2em;
+    }
+  }
+  @include media($large-screen-up) {
+    .link-landing-action {
+      font-size: 3em;
+    }
+  }
+}

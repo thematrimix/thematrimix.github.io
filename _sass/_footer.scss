@@ -1,0 +1,50 @@
+.site-footer {
+  @include size(100% auto);
+  @include padding(null null rem(10) null);
+  @include background(linear-gradient($site-theme-color-main, black));
+  color: white;
+  text-align: center;
+}
+
+.footer-description {
+  font-size: .8em;
+}
+
+.footer-social-nav {
+  li {
+    display: inline-block;
+    @include padding(null rem(5) null rem(5));
+
+    a {
+      cursor: pointer;
+      display: inline-block;
+      @include padding(0);
+      @include size(rem(44) rem(44));
+      @include hide-text;
+
+      &.github {
+        @include background(url("../images/github.svg") no-repeat);
+      }
+
+      &.twitter {
+        @include background(url("../images/twitter.svg") no-repeat);
+      }
+
+      &.linkedin {
+        @include background(url("../images/linkedin.svg") no-repeat);
+      }
+
+      &.facebook {
+        @include background(url("../images/facebook-square.svg") no-repeat);
+      }
+
+      &.googleplus {
+        @include background(url("../images/googleplus-square.svg") no-repeat);
+      }
+
+      &.rss-feed {
+        @include background(url("../images/rss-feed.svg") no-repeat);
+      }
+    }
+  }
+}

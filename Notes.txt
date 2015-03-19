@@ -42,3 +42,9 @@ http://zurb.com/article/266/super-awesome-buttons-with-css3-and-rgba
 Microdata (very good to learn)
 http://schema.org/docs/gs.html
 https://support.google.com/webmasters/answer/176035?hl=en
+
+foot at bottom
+http://cbracco.me/css-sticky-footer-effect/
+
+
+jekyll serve --host=0.0.0.0 --watch --force_polling --detach

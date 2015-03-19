@@ -4,13 +4,15 @@
   {% include head.html %}
   </head>
   <body>
-    {% include header.html %}
+    <div id="wrapper">
+      {% include header.html %}
 
-    <main>
-      {{ content }}
-    </main>
+      <main id="site-content">
+        {{ content }}
+      </main>
 
-    {% include footer.html %}
+      {% include footer.html %}
+    </div>
 
     <script src="{{ "assets/js/main.js" | prepend: site.baseurl }}"></script>
   </body>

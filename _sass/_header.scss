@@ -1,10 +1,5 @@
-.site-header {
-  @include size(100% 50%);
-}
-@include media($medium-screen-up) {
-  .site-header {
-    @include size(100% 75%);
-  }
+#site-header {
+  @include size(100% $header-height);
 }
 
 .site-header-hamburger {
@@ -12,7 +7,7 @@
   top: 0;
   left: 0;
   background: $site-theme-color-main;
-  height: $header-size;
+  height: $header-bar-size;
   width: 100%;
   z-index: $header-zindex;
   box-shadow: 0 rem(1) rem(2) rgba(0, 0, 0, 0.3);
@@ -28,12 +23,12 @@
     transition: background-color 0.3s;
     transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
-    height: $header-size-large;
+    height: $header-bar-size-large;
 
     &.is-fixed {
       /* when the user scrolls down, we hide the header right above the viewport */
       position: fixed;
-      top: $header-size-large * -1;
+      top: $header-bar-size-large * -1;
       background-color: rgba(2, 23, 37, 0.96);
       transition: transform 0.3s;
     }
@@ -165,7 +160,7 @@
   background: rgba(2, 23, 37, 0.96);
   z-index: $nav-zindex;
   text-align: center;
-  padding: $header-size 0;
+  padding: $header-bar-size 0;
   backface-visibility: hidden;
   overflow: auto;
   transform: translateY(-100%);
@@ -212,7 +207,7 @@
   .header-social-nav {
     li {
       display: inline-block;
-      @include padding(null rem(5) null rem(5));
+      @include padding(null rem(1) null rem(1));
     }
 
     .icon {
@@ -225,34 +220,39 @@
 
     a {
       &.github {
-        @include background(url("../images/github.svg") no-repeat);
+        @include background(url("../images/media-icons/github.svg") no-repeat);
       }
 
       &.twitter {
-        @include background(url("../images/twitter.svg") no-repeat);
+        @include background(url("../images/media-icons/twitter.svg") no-repeat);
       }
 
       &.linkedin {
-        @include background(url("../images/linkedin.svg") no-repeat);
+        @include background(url("../images/media-icons/linkedin.svg") no-repeat);
       }
 
       &.facebook {
-        @include background(url("../images/facebook-square.svg") no-repeat);
+        @include background(url("../images/media-icons/facebook-square.svg") no-repeat);
       }
 
       &.googleplus {
-        @include background(url("../images/googleplus-square.svg") no-repeat);
+        @include background(url("../images/media-icons/googleplus-square.svg") no-repeat);
       }
 
       &.rss-feed {
-        @include background(url("../images/rss-feed.svg") no-repeat);
+        @include background(url("../images/media-icons/rss-feed.svg") no-repeat);
       }
+    }
+  }
+  @include media($medium-screen-up) {
+    li {
+      @include padding(null rem(5) null rem(5));
     }
   }
 }
 @include media($large-screen-up) {
   .header-main-nav-container {
-    padding: $header-size-large 0;
+    padding: $header-bar-size-large 0;
   }
 }
 
@@ -263,10 +263,9 @@
 .header-main-image {
   position: relative;
   height: 100%;
-  background: url("http://placeskull.com/160/45/fc9426") center center no-repeat;
+  background: url("http://placeskull.com/100/10/77DD77") center center no-repeat;
   background-size: cover;
   z-index: $content-zindex;
-  margin-top: $header-size;
 }
 @include media($medium-screen-up) {
   .header-main-image {

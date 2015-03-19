@@ -4,14 +4,19 @@ $site-theme-color-highlight: tint($site-theme-color-main, 20%);
 $site-link-color-main: #C23B22;
 $site-link-color-hover: #FF6961;
 
+$header-height: rem(350);
+$header-height-large: rem(450);
 
-$header-size: rem(50);
-$header-size-large: rem(80);
+$header-bar-size: rem(50);
+$header-bar-size-large: rem(80);
 
 $hamburger-color: white;
-$hamburger-size: $header-size / 16;
-$hamburger-size-large: $header-size-large / 16;
+$hamburger-size: $header-bar-size / 16;
+$hamburger-size-large: $header-bar-size-large / 16;
 
 $content-zindex: 1;
 $nav-zindex: 2;
 $header-zindex: 3;
+
+$footer-height: rem(185);
+$footer-height-large: rem(200);

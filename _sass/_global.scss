@@ -1,6 +1,10 @@
 html, body {
   height: 100%;
+}
 
+#wrapper {
+  min-height: 100%;
+  position: relative;
 }
 
 body {
@@ -13,12 +17,4 @@ a {
   &:hover {
     color: $site-link-color-hover;
   }
-}
-
-.overflow-hidden {
-  overflow: hidden;
-}
-
-.text-center {
-  text-align: center;
 }

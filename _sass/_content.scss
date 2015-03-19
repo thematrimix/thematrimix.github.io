@@ -1,6 +1,20 @@
-main {
+#site-content {
   @include outer-container;
   z-index: $content-zindex;
+  padding-bottom: $footer-height;
+}
+@include media($large-screen-up) {
+  #site-content {
+    padding-bottom: $footer-height-large;
+  }
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .row {

@@ -1,11 +1,12 @@
 #site-content {
   @include outer-container;
+  @include margin($header-bar-size null null null);
+  @include flex(1);
   z-index: $content-zindex;
-  padding-bottom: $footer-height;
 }
-@include media($large-screen-up) {
+@include media($medium-screen-up) {
   #site-content {
-    padding-bottom: $footer-height-large;
+    @include margin(0 null null null);
   }
 }
 
@@ -18,18 +19,16 @@
 }
 
 .row {
-  margin-top: rem(5);
-  margin-bottom: rem(5);
+  @include margin(rem(5) null rem(5) null);
 }
 
 .post-header {
-  margin-top: rem(5);
-  margin-bottom: rem(5);
+  @include margin(rem(5) null rem(5) null);
 
   .post-title {
+    @include margin(0 0 0 0);
     font-size: 1.1em;
     font-weight: bold;
-    margin: 0;
   }
 
   .post-meta {
@@ -48,6 +47,8 @@
 
 #wrapper-landing {
   @include fill-parent();
+  @include padding(0 rem(10) 0 rem(10));
+  width: 100vw;
 
   div.row:not(:first-child) {
     display: none;
@@ -76,23 +77,27 @@
   }
 
   .link-landing-action {
+    @include border-color($site-theme-color-main null $site-theme-color-main null);
+    @include border-style(solid null solid null);
+    @include border-width(rem(3) null rem(3) null);
+    @include margin(rem(5) null rem(5) null);
+    @include transition-property(all);
+    @include transition-duration(0.4s);
+    @include transition-timing-function(ease-in-out);
     cursor: pointer;
     display: inline-block;
     text-decoration: none;
     font-size: 1.5em;
     color: $site-theme-color-main;
-    border-top: 3px solid $site-theme-color-main;
-    border-bottom: 3px solid $site-theme-color-main;
     border-radius: 1px;
     width: 60%;
-    transition: all 0.4s ease-in-out;
-    margin-top: rem(5);
-    margin-bottom: rem(5);
 
     &:hover {
       @include background($site-theme-color-highlight);
+      @include transition-property(all);
+      @include transition-duration(0.4s);
+      @include transition-timing-function(ease-in-out);
       color: white;
-      transition: all 0.4s ease-in-out;
     }
   }
   @include media($medium-screen-up) {
@@ -104,5 +109,10 @@
     .link-landing-action {
       font-size: 3em;
     }
+  }
+}
+@include media($medium-screen-up) {
+  #wrapper-landing {
+    @include fill-parent();
   }
 }

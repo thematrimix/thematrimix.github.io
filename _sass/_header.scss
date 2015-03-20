@@ -1,88 +1,84 @@
 #site-header {
   @include size(100% $header-height);
+  @include position(relative, null null null null);
 }
 
 .site-header-hamburger {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: $site-theme-color-main;
-  height: $header-bar-size;
-  width: 100%;
+  @include position(absolute, 0 null null null);
+  @include size(100% $header-bar-size);
+  @include background($site-theme-color-main);
   z-index: $header-zindex;
   box-shadow: 0 rem(1) rem(2) rgba(0, 0, 0, 0.3);
 }
 @include media($medium-screen-up) {
   .site-header-hamburger {
-    background: transparent;
+    @include background(transparent);
     box-shadow: none;
   }
 }
 @include media($large-screen-up) {
   .site-header-hamburger {
-    transition: background-color 0.3s;
-    transform: translate3d(0, 0, 0);
-    backface-visibility: hidden;
-    height: $header-bar-size-large;
+    @include transition-property(background-color);
+    @include transition-duration(0.3s);
+    @include transform(translate3d(0, 0, 0));
+    @include backface-visibility(hidden);
+    @include size(100% $header-bar-size-large);
 
     &.is-fixed {
       /* when the user scrolls down, we hide the header right above the viewport */
-      position: fixed;
-      top: $header-bar-size-large * -1;
-      background-color: rgba(2, 23, 37, 0.96);
-      transition: transform 0.3s;
+      @include position(fixed, ($header-bar-size-large * -1) null null null);
+      @include background(rgba(2, 23, 37, 0.96));
+      @include transition-property(transform);
+      @include transition-duration(0.3s);
     }
     &.is-visible {
       /* if the user changes the scrolling direction, we show the header */
-      transform: translate3d(0, 100%, 0);
+      @include transform(translate3d(0, 100%, 0));
     }
   }
 }
 
 .hamburger-trigger {
-  position: relative;
-  cursor: pointer;
-  float: right;
+  @include position(absolute, null 0 null null);
+  @include padding(null ($hamburger-size * 10) null null);
+  @include margin(($hamburger-size * 3) ($hamburger-size * 5) null null);
   height: $hamburger-size * 9;
+  cursor: pointer;
   color: $hamburger-color;
-  padding-right: $hamburger-size * 10;
-  margin-top: $hamburger-size * 3;
-  margin-right: $hamburger-size * 5;
-  margin-bottom: $hamburger-size * 3;
-  margin-left: $hamburger-size * 3;
 
   &:hover {
-    background: $site-theme-color-highlight;
+    @include background($site-theme-color-highlight);
     border-radius: rem(5);
   }
 
   .hamburger-text {
-    position: inherit;
+    @include transition-property(all);
+    @include transition-duration(0.4s);
+    @include transition-timing-function(ease-in-out);
+    @include margin(null null null ($hamburger-size * 2));
     text-transform: uppercase;
     font-size: $hamburger-size * 6;
     color: $hamburger-color;
     display: none;
-    transition: all 0.4s ease-in-out;
-    margin-left: $hamburger-size * 2;
   }
 
   .hamburger-icon {
+    @include margin(null ($hamburger-size * 2) null null);
     top: $hamburger-size * 3.7;
-    margin-right: $hamburger-size * 2;
   }
 
   .hamburger-icon,
   .hamburger-icon:before,
   .hamburger-icon:after {
-    border-radius: rem(1);
-    height: $hamburger-size;
-    width: $hamburger-size * 6;
-    background: $hamburger-color;
-    position: absolute;
+    @include size(($hamburger-size * 6) ($hamburger-size));
+    @include background($hamburger-color);
+    @include position(absolute, null 0 null null);
+    @include transition-property(all);
+    @include transition-duration(0.4s);
+    @include transition-timing-function(ease-in-out);
     display: block;
     content: '';
-    right: 0;
-    transition: all 0.4s ease-in-out;
+    border-radius: rem(1);
   }
   .hamburger-icon:before {
     top: $hamburger-size * -2;
@@ -92,17 +88,17 @@
   }
 
   &.active .hamburger-icon {
-    background-color: transparent;
+    @include background(transparent);
   }
   &.active .hamburger-icon:before,
   &.active .hamburger-icon:after {
     top: 0;
   }
   &.active .hamburger-icon:before {
-    transform: rotate(45deg);
+    @include transform(rotate(45deg));
   }
   &.active .hamburger-icon:after {
-    transform: translateY($hamburger-size * -2) rotate(-45deg);
+    @include transform(translateY($hamburger-size * -2) rotate(-45deg));
     top: $hamburger-size * 2;
   }
 }
@@ -115,27 +111,23 @@
 }
 @include media($large-screen-up) {
   .hamburger-trigger {
+    @include padding(null ($hamburger-size-large * 10) null null);
+    @include margin(($hamburger-size-large * 3) ($hamburger-size-large * 5) null null);
     height: $hamburger-size-large * 9;
-    padding-right: $hamburger-size-large * 10;
-    margin-top: $hamburger-size-large * 3;
-    margin-right: $hamburger-size-large * 5;
-    margin-bottom: $hamburger-size-large * 3;
-    margin-left: $hamburger-size-large * 3;
 
     .hamburger-text {
       font-size: $hamburger-size-large * 6;
     }
 
     .hamburger-icon {
+      @include margin(null ($hamburger-size-large * 2) null null);
       top: $hamburger-size-large * 3.7;
-      margin-right: $hamburger-size-large * 2;
     }
 
     .hamburger-icon,
     .hamburger-icon:before,
     .hamburger-icon:after {
-      height: $hamburger-size-large;
-      width: $hamburger-size-large * 6;
+      @include size(($hamburger-size-large * 6) ($hamburger-size-large));
     }
     .hamburger-icon:before {
       top: $hamburger-size-large * -2;
@@ -145,50 +137,46 @@
     }
 
     &.active .hamburger-icon:after {
-      transform: translateY($hamburger-size-large * -2) rotate(-45deg);
+      @include transform(translateY($hamburger-size-large * -2) rotate(-45deg));
       top: $hamburger-size-large * 2;
     }
   }
 }
 
 .header-main-nav-container {
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(2, 23, 37, 0.96);
+  @include position(fixed, 0 null null 0);
+  @include size(100% 100%);
+  @include background(rgba(2, 23, 37, 0.96));
+  @include padding($header-bar-size 0 $header-bar-size 0);
+  @include backface-visibility(hidden);
+  @include transform(translateY(-100%));
+  @include transition-property(transform);
+  @include transition-duration(0.4s);
   z-index: $nav-zindex;
   text-align: center;
-  padding: $header-bar-size 0;
-  backface-visibility: hidden;
   overflow: auto;
-  transform: translateY(-100%);
-  transition-property: transform;
-  transition-duration: 0.4s;
 
   li {
+    @include margin(rem(10) 0 rem(10) 0);
     font-size: rem(20);
-    margin: rem(10) 0;
     text-transform: capitalize;
   }
 
   a {
+    @include transition-property(background);
+    @include transition-duration(0.2s);
     cursor: pointer;
     color: white;
-    padding: .4em 1em;
-    border-radius: 0.25em;
-    transition: background 0.2s;
+    border-radius: rem(3);
   }
 
   .header-main-nav {
     a {
+      @include padding(rem(8) rem(8) rem(8) rem(8));
+      @include background(transparent);
       cursor: pointer;
       color: white;
-      @include border-top-radius(rem(3));
-      @include border-bottom-radius(rem(3));
-      @include padding(rem(8));
-      @include background(transparent);
+      border-radius: rem(3);
 
       &:hover {
         @include background($site-theme-color-highlight);
@@ -197,25 +185,26 @@
   }
 
   .section-header {
+    @include margin(1rem null null null);
+    @include padding(0 0 0 0);
     color: #b4c6d3;
     text-transform: capitalize;
     font-size: rem(14);
-    padding-top: rem(15);
-    margin: 0;
   }
 
   .header-social-nav {
     li {
-      display: inline-block;
       @include padding(null rem(1) null rem(1));
+      @include margin(0 0 0 0);
+      display: inline-block;
     }
 
     .icon {
-      cursor: pointer;
-      display: inline-block;
-      @include padding(0);
+      @include padding(0 0 0 0);
       @include size(rem(44) rem(44));
       @include hide-text;
+      cursor: pointer;
+      display: inline-block;
     }
 
     a {
@@ -245,30 +234,33 @@
     }
   }
   @include media($medium-screen-up) {
-    li {
-      @include padding(null rem(5) null rem(5));
+    .header-social-nav {
+      li {
+        @include padding(null rem(5) null rem(5));
+      }
     }
   }
 }
 @include media($large-screen-up) {
   .header-main-nav-container {
-    padding: $header-bar-size-large 0;
+    @include padding($header-bar-size-large 0 $header-bar-size-large 0);
   }
 }
 
 .is-visible {
-  transform: translateY(0);
+  @include transform(translateY(0));
 }
 
 .header-main-image {
-  position: relative;
-  height: 100%;
-  background: url("http://placeskull.com/100/10/77DD77") center center no-repeat;
+  @include position(relative, null null null null);
+  @include size(100% 100%);
+  @include margin($header-bar-size null null null);
+  @include background(url("http://placeskull.com/100/10/77DD77") center center no-repeat);
   background-size: cover;
   z-index: $content-zindex;
 }
 @include media($medium-screen-up) {
   .header-main-image {
-    margin-top: 0;
+    @include margin(0 null null null);
   }
 }

@@ -1,14 +1,15 @@
-html, body {
-  height: 100%;
-}
-
-#wrapper {
-  min-height: 100%;
-  position: relative;
+html,
+body {
+  margin: 0;
+  border: 0;
+  padding: 0;
 }
 
 body {
-  background: url("../images/cream_flat.jpg") repeat;
+  @include background(url("../images/cream_flat.jpg") repeat);
+  @include display(flex);
+  @include flex-direction(column);
+  min-height: 100vh;
 }
 
 a {

@@ -7,9 +7,7 @@ body {
 
 body {
   @include background(url("../images/cream_flat.jpg") repeat);
-  @include display(flex);
-  @include flex-direction(column);
-  min-height: 100vh;
+  height: 100%;
 }
 
 a {

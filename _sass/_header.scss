@@ -1,6 +1,5 @@
 #site-header {
   @include size(100% $header-height);
-  @include position(relative, null null null null);
 }
 
 .site-header-hamburger {

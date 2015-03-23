@@ -1,7 +1,6 @@
 #site-content {
   @include outer-container;
-  @include margin($header-bar-size null null null);
-  @include flex(1);
+  @include margin(null auto null auto);
   z-index: $content-zindex;
 }
 @include media($medium-screen-up) {
@@ -48,7 +47,6 @@
 #wrapper-landing {
   @include fill-parent();
   @include padding(0 rem(10) 0 rem(10));
-  width: 100vw;
 
   div.row:not(:first-child) {
     display: none;

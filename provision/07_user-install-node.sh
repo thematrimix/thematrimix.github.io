@@ -14,20 +14,14 @@ if [ -s ~/.nvm/nvm.sh ]; then
 		nvm use $1
 
 		shift
+
+		if (( $# )); then
+			echo ">>>>>Installing global node packages $@<<<<<"
+			npm install -g $@
+		fi
 	fi
 
 	echo ">>>>>nodejs version is: $(nvm current)<<<<<"
 else
-	echo ">>>>>Can't install node with out nvm<<<<<"
-fi
-
-type npm >/dev/null 2>&1
-
-if [ $? -ne 0 ] && (( $# )); then
-	echo ">>>>>Installing global node packages $@<<<<<"
-	npm install -g $@
-elif (( $# )); then
-	echo ">>>>>no packages to install<<<<<"
-else
-	echo ">>>>>npm is not installed<<<<<"
+	echo ">>>>>nvm does not appear to be installed<<<<<"
 fi

@@ -1,7 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generate more at customizr.net -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg id="digg2-logo" class="custom-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" style="height: 100px; width: 100px;">
-	<path class="inner-shape" style="opacity: 1; fill: rgb(255, 255, 255);" transform="translate(18,18) scale(0.64)" d="M15.659,34.706H1.001v30.587h24.704V21.716H15.659C15.659,21.716,15.659,34.706,15.659,34.706z M15.659,56.356h-4.613 V43.608h4.613V56.356z M30.318,65.294h10.046V34.706H30.318V65.294z M30.318,30.618h10.046v-8.902H30.318V30.618z M44.978,65.294 h14.659v4.088H44.978v8.902l24.704-0.001l0.001-43.577H44.978V65.294z M55.022,43.608h4.614v12.748h-4.614V43.608z M74.295,34.706 v30.587h14.659v4.088H74.295v8.902l24.704-0.001l0.001-43.577H74.295V34.706z M88.954,56.356h-4.613V43.608h4.613V56.356z"></path>
-</svg>
-
+<svg class="custom-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" style="height:100px;width:100px"><path class="inner-shape" d="M28.022 40.212h-9.38v19.576h15.81v-27.89h-6.43v8.314zm0 13.856H25.07v-8.16h2.952v8.16zm9.382 5.72h6.43V40.212h-6.43v19.576zm0-22.192h6.43v-5.698h-6.43v5.698zm9.382 22.192h9.382v2.616h-9.382v5.698h15.81V40.21h-15.81v19.576zm6.428-13.88h2.953v8.16h-2.953v-8.16zm12.335-5.696v19.576h9.38v2.616h-9.38V68.1h15.81V40.21H65.55v.002zm9.38 13.856H71.98v-8.16h2.953v8.16z" fill="#fff"/></svg>

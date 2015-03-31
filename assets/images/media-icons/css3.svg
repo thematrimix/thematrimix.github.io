@@ -1,7 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generate more at customizr.net -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg id="css3" class="custom-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" style="height: 100px; width: 100px;">
-	<path class="inner-shape" style="opacity: 1; fill: rgb(255, 255, 255);" transform="translate(18,18) scale(0.64)" d="M15.584,5.643l-3.288,16.454h66.969l-2.094,10.628H10.16L6.916,49.177h66.963l-3.734,18.764l-26.989,8.941l-23.39-8.941 l1.601-8.139H4.916L1.002,79.551l38.686,14.806l44.598-14.806L99.002,5.644L15.584,5.643z"></path>
-</svg>
-
+<svg class="custom-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" style="height:100px;width:100px"><path class="inner-shape" d="M27.974 21.612l-2.105 10.53h42.86l-1.34 6.802H24.5l-2.076 10.53h42.857l-2.39 12.008-17.273 5.722-14.97-5.722 1.025-5.21h-10.53l-2.504 12.64L43.4 78.39l28.543-9.475 9.418-47.3H27.975z" fill="#fff"/></svg>

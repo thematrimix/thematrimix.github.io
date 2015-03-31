@@ -1,7 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generate more at customizr.net -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg id="orkut" class="custom-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" style="height: 100px; width: 100px;">
-	<path class="inner-shape" style="opacity: 1; fill: rgb(255, 255, 255);" transform="translate(18,18) scale(0.64)" d="M50,1.484C22.939,1.484,1,23.206,1,50s21.939,48.516,49,48.516c27.063-0.001,49-21.722,49-48.517S77.063,1.484,50,1.484z M50,82.297c-17.941,0-32.485-14.4-32.485-32.163S32.059,17.971,50,17.971c17.94,0,32.485,14.401,32.485,32.164 S67.941,82.297,50,82.297z"></path>
-</svg>
-
+<svg class="custom-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" style="height:100px;width:100px"><path class="inner-shape" d="M50 18.95c-17.32 0-31.36 13.902-31.36 31.05S32.68 81.05 50 81.05 81.36 67.148 81.36 50 67.32 18.95 50 18.95zm0 51.72c-11.482 0-20.79-9.216-20.79-20.584S38.518 29.5 50 29.5s20.79 9.218 20.79 20.586S61.482 70.67 50 70.67z" fill="#fff"/></svg>

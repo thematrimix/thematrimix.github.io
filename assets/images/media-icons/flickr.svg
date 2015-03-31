@@ -1,7 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generate more at customizr.net -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg id="flickr" class="custom-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" style="height: 100px; width: 100px;">
-	<path class="inner-shape" style="opacity: 1; fill: rgb(255, 255, 255);" transform="translate(18,18) scale(0.64)" d="M1,50c0-11.839,9.598-21.438,21.438-21.438S43.875,38.161,43.875,50s-9.598,21.438-21.438,21.438S1,61.839,1,50z M56.125,50 c0-11.839,9.598-21.438,21.438-21.438S99,38.161,99,50s-9.598,21.438-21.438,21.438S56.125,61.839,56.125,50z"></path>
-</svg>
-
+<svg class="custom-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" style="height:100px;width:100px"><path class="inner-shape" d="M18.64 50c0-7.577 6.143-13.72 13.72-13.72S46.08 42.423 46.08 50s-6.143 13.72-13.72 13.72S18.64 57.577 18.64 50zm35.28 0c0-7.577 6.143-13.72 13.72-13.72S81.36 42.423 81.36 50s-6.143 13.72-13.72 13.72S53.92 57.577 53.92 50z" fill="#fff"/></svg>

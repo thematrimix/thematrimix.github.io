@@ -1,7 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generate more at customizr.net -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg id="facebook-square" class="custom-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" style="height: 100px; width: 100px;">
-	<path class="inner-shape" style="opacity: 1; fill: rgb(255, 255, 255);" transform="translate(18,18) scale(0.64)" d="M82.667,1H17.335C8.351,1,1,8.351,1,17.336v65.329c0,8.99,7.351,16.335,16.334,16.335h65.332 C91.652,99.001,99,91.655,99,82.665V17.337C99,8.353,91.652,1.001,82.667,1L82.667,1z M84.318,50H68.375v42.875H50V50h-8.855V35.973 H50v-9.11c0-12.378,5.339-19.739,19.894-19.739h16.772V22.3H72.967c-4.066-0.007-4.57,2.12-4.57,6.078l-0.023,7.594H86.75 l-2.431,14.027V50z"></path>
-</svg>
-
+<svg class="custom-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path class="inner-shape" d="M70.907 18.64H29.094c-5.75 0-10.454 4.705-10.454 10.455v41.81c0 5.754 4.705 10.455 10.454 10.455h41.812c5.75 0 10.454-4.7 10.454-10.454v-41.81c0-5.75-4.703-10.455-10.453-10.456zM71.964 50H61.76v27.44H50V50h-5.667v-8.977H50v-5.83c0-7.923 3.417-12.634 12.732-12.634h10.734v9.712H64.7c-2.603-.004-2.926 1.357-2.926 3.89l-.015 4.86h11.76L71.964 50z" fill="#fff"/></svg>
